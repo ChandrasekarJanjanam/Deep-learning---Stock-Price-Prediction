@@ -31,6 +31,8 @@ print(dataset_test.shape)
 
 from sklearn.preprocessing import MinMaxScaler
 scalar=MinMaxScaler(feature_range=(0,1))
+
+
 dataset_train=scalar.fit_transform(dataset_train)
 dataset_train[:5] # Print top 5 rows of train dataset
 
@@ -107,49 +109,7 @@ model.fit(x_train,y_train, epochs=25,batch_size=16)
 Epoch 1/25
 590/590 [==============================] - 8s 13ms/step - loss: 0.1410
 Epoch 2/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0161
-Epoch 3/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0034
-Epoch 4/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0021
-Epoch 5/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0022
-Epoch 6/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0021
-Epoch 7/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0017
-Epoch 8/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0019
-Epoch 9/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0018
-Epoch 10/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0016
-Epoch 11/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0018
-Epoch 12/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0023
-Epoch 13/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0018
-Epoch 14/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0017
-Epoch 15/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0021
-Epoch 16/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0018
-Epoch 17/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0016
-Epoch 18/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0016
-Epoch 19/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0016
-Epoch 20/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0016
-Epoch 21/25
-590/590 [==============================] - 3s 5ms/step - loss: 0.0014
-Epoch 22/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0015
-Epoch 23/25
-590/590 [==============================] - 3s 4ms/step - loss: 0.0014
+
 Epoch 24/25
 590/590 [==============================] - 3s 4ms/step - loss: 0.0015
 Epoch 25/25
@@ -162,6 +122,7 @@ predictionsUnscaled=scalar.inverse_transform(predictions)
 #print(predictions)
 #print(predictionsUnscaled)
 
+---------------------------------------------------------------------------------------Ignore this code - start
 y_test=scalar.inverse_transform(y_test)
 y_test
 
@@ -172,149 +133,6 @@ actual value is [11855.5] Predicted value is - [11767.712] diff is - [87.7880859
 actual value is [11958.35] Predicted value is - [11873.049] diff is - [85.30117188]
 actual value is [11905.8] Predicted value is - [11972.845] diff is - [-67.04472656]
 actual value is [11865.3] Predicted value is - [11921.981] diff is - [-56.68144531]
-actual value is [11999.8] Predicted value is - [11882.601] diff is - [117.19941406]
-actual value is [11953.75] Predicted value is - [12012.77] diff is - [-59.01953125]
-actual value is [12052.65] Predicted value is - [11968.403] diff is - [84.24667969]
-actual value is [12039.8] Predicted value is - [12063.416] diff is - [-23.61601563]
-actual value is [11865.2] Predicted value is - [12051.129] diff is - [-185.92890625]
-actual value is [11934.9] Predicted value is - [11882.503] diff is - [52.39707031]
-actual value is [11959.85] Predicted value is - [11950.181] diff is - [9.66933594]
-actual value is [11962.45] Predicted value is - [11974.292] diff is - [-11.84199219]
-actual value is [11873.9] Predicted value is - [11976.801] diff is - [-102.90078125]
-actual value is [11910.1] Predicted value is - [11890.976] diff is - [19.12441406]
-actual value is [11844.] Predicted value is - [11926.153] diff is - [-82.15332031]
-actual value is [11677.05] Predicted value is - [11861.828] diff is - [-184.778125]
-actual value is [11744.45] Predicted value is - [11697.669] diff is - [46.78105469]
-actual value is [11653.65] Predicted value is - [11764.217] diff is - [-110.56679688]
-actual value is [11827.6] Predicted value is - [11674.483] diff is - [153.11660156]
-actual value is [11725.8] Predicted value is - [11845.807] diff is - [-120.00664063]
-actual value is [11681.] Predicted value is - [11745.839] diff is - [-64.83886719]
-actual value is [11768.15] Predicted value is - [11701.578] diff is - [66.571875]
-actual value is [11860.85] Predicted value is - [11787.531] diff is - [73.31875]
-actual value is [11861.15] Predicted value is - [11878.265] diff is - [-17.11464844]
-actual value is [11839.9] Predicted value is - [11878.557] diff is - [-38.65664063]
-actual value is [11890.3] Predicted value is - [11857.825] diff is - [32.47480469]
-actual value is [11932.15] Predicted value is - [11906.928] diff is - [25.22226562]
-actual value is [11928.8] Predicted value is - [11947.52] diff is - [-18.71953125]
-actual value is [11964.75] Predicted value is - [11944.275] diff is - [20.47460938]
-actual value is [11770.4] Predicted value is - [11979.0205] diff is - [-208.62050781]
-actual value is [11531.6] Predicted value is - [11789.743] diff is - [-258.14316406]
-actual value is [11536.15] Predicted value is - [11552.933] diff is - [-16.78261719]
-actual value is [11561.45] Predicted value is - [11557.481] diff is - [3.96855469]
-actual value is [11601.15] Predicted value is - [11582.752] diff is - [18.39804687]
-actual value is [11614.75] Predicted value is - [11622.321] diff is - [-7.57128906]
-actual value is [11596.65] Predicted value is - [11635.853] diff is - [-39.20253906]
-actual value is [11670.75] Predicted value is - [11617.841] diff is - [52.90917969]
-actual value is [11675.6] Predicted value is - [11691.431] diff is - [-15.83066406]
-actual value is [11627.95] Predicted value is - [11696.233] diff is - [-68.28339844]
-actual value is [11392.85] Predicted value is - [11648.974] diff is - [-256.12363281]
-actual value is [11372.25] Predicted value is - [11413.645] diff is - [-41.39453125]
-actual value is [11322.45] Predicted value is - [11392.879] diff is - [-70.42890625]
-actual value is [11290.4] Predicted value is - [11342.596] diff is - [-52.19570313]
-actual value is [11247.45] Predicted value is - [11310.18] diff is - [-62.7296875]
-actual value is [11307.5] Predicted value is - [11266.676] diff is - [40.82421875]
-actual value is [11213.7] Predicted value is - [11327.48] diff is - [-113.78046875]
-actual value is [11034.05] Predicted value is - [11232.443] diff is - [-198.39335938]
-actual value is [11060.2] Predicted value is - [11049.688] diff is - [10.51152344]
-actual value is [10930.3] Predicted value is - [11076.336] diff is - [-146.0359375]
-actual value is [10895.8] Predicted value is - [10943.872] diff is - [-48.07207031]
-actual value is [10815.4] Predicted value is - [10908.662] diff is - [-93.26210938]
-actual value is [10958.1] Predicted value is - [10826.596] diff is - [131.50429688]
-actual value is [10899.2] Predicted value is - [10972.237] diff is - [-73.03730469]
-actual value is [11087.9] Predicted value is - [10912.133] diff is - [175.7671875]
-actual value is [11139.4] Predicted value is - [11104.549] diff is - [34.85117187]
-actual value is [11003.25] Predicted value is - [11156.956] diff is - [-153.70605469]
-actual value is [11043.65] Predicted value is - [11018.289] diff is - [25.3609375]
-actual value is [11094.8] Predicted value is - [11059.473] diff is - [35.32734375]
-actual value is [11063.9] Predicted value is - [11111.573] diff is - [-47.67324219]
-actual value is [11018.15] Predicted value is - [11080.1045] diff is - [-61.95449219]
-actual value is [10905.3] Predicted value is - [11033.481] diff is - [-128.18144531]
-actual value is [10699.6] Predicted value is - [10918.358] diff is - [-218.75839844]
-actual value is [11000.3] Predicted value is - [10708.437] diff is - [291.86347656]
-actual value is [11106.55] Predicted value is - [11015.28] diff is - [91.26972656]
-actual value is [11101.3] Predicted value is - [11123.534] diff is - [-22.23417969]
-actual value is [10996.05] Predicted value is - [11118.19] diff is - [-122.14042969]
-actual value is [10987.8] Predicted value is - [11010.947] diff is - [-23.14726563]
-actual value is [10960.95] Predicted value is - [11002.533] diff is - [-41.58320312]
-actual value is [10790.4] Predicted value is - [10975.1455] diff is - [-184.74550781]
-actual value is [10860.95] Predicted value is - [10801.078] diff is - [59.871875]
-actual value is [10883.8] Predicted value is - [10873.091] diff is - [10.70917969]
-actual value is [10936.7] Predicted value is - [10896.414] diff is - [40.2859375]
-actual value is [11028.5] Predicted value is - [10950.402] diff is - [78.09765625]
-actual value is [11058.3] Predicted value is - [11044.032] diff is - [14.26777344]
-actual value is [10986.8] Predicted value is - [11074.399] diff is - [-87.59941406]
-actual value is [10994.85] Predicted value is - [11001.513] diff is - [-6.66269531]
-actual value is [11000.1] Predicted value is - [11009.724] diff is - [-9.62363281]
-actual value is [10872.8] Predicted value is - [11015.077] diff is - [-142.27714844]
-actual value is [10845.2] Predicted value is - [10885.187] diff is - [-39.98652344]
-actual value is [10746.8] Predicted value is - [10857.014] diff is - [-110.21367188]
-actual value is [11542.7] Predicted value is - [10756.585] diff is - [786.11503906]
-actual value is [11590.7] Predicted value is - [11564.028] diff is - [26.67167969]
-actual value is [11564.85] Predicted value is - [11611.916] diff is - [-47.06601562]
-actual value is [11469.85] Predicted value is - [11586.145] diff is - [-116.29453125]
-actual value is [11556.35] Predicted value is - [11491.075] diff is - [65.27480469]
-actual value is [11491.15] Predicted value is - [11577.661] diff is - [-86.51113281]
-actual value is [11515.4] Predicted value is - [11512.4375] diff is - [2.9625]
-actual value is [11322.25] Predicted value is - [11536.727] diff is - [-214.4765625]
-actual value is [11388.45] Predicted value is - [11342.395] diff is - [46.05546875]
-actual value is [11196.2] Predicted value is - [11409.211] diff is - [-213.0109375]
-actual value is [11152.95] Predicted value is - [11214.679] diff is - [-61.72871094]
-actual value is [11280.5] Predicted value is - [11170.734] diff is - [109.765625]
-actual value is [11257.7] Predicted value is - [11300.158] diff is - [-42.45820312]
-actual value is [11335.9] Predicted value is - [11277.064] diff is - [58.83554687]
-actual value is [11360.85] Predicted value is - [11356.1875] diff is - [4.6625]
-actual value is [11464.95] Predicted value is - [11381.378] diff is - [83.57207031]
-actual value is [11466.3] Predicted value is - [11486.157] diff is - [-19.85722656]
-actual value is [11580.3] Predicted value is - [11487.513] diff is - [92.78730469]
-actual value is [11657.15] Predicted value is - [11601.553] diff is - [55.59726562]
-actual value is [11596.2] Predicted value is - [11677.954] diff is - [-81.75410156]
-actual value is [11661.65] Predicted value is - [11617.394] diff is - [44.25644531]
-actual value is [11646.15] Predicted value is - [11682.415] diff is - [-36.26503906]
-actual value is [11662.25] Predicted value is - [11667.044] diff is - [-4.79394531]
-actual value is [11643.95] Predicted value is - [11683.009] diff is - [-39.05878906]
-actual value is [11883.9] Predicted value is - [11664.86] diff is - [219.03964844]
-actual value is [11890.45] Predicted value is - [11900.705] diff is - [-10.25507812]
-actual value is [11886.6] Predicted value is - [11907.074] diff is - [-20.47421875]
-actual value is [11928.9] Predicted value is - [11903.331] diff is - [25.56894531]
-actual value is [11974.6] Predicted value is - [11944.373] diff is - [30.22695313]
-actual value is [11911.5] Predicted value is - [11988.518] diff is - [-77.01757812]
-actual value is [12021.1] Predicted value is - [11927.511] diff is - [93.58925781]
-actual value is [11987.15] Predicted value is - [12033.217] diff is - [-46.06679688]
-actual value is [11879.2] Predicted value is - [12000.604] diff is - [-121.40351562]
-actual value is [11908.3] Predicted value is - [11896.134] diff is - [12.16621094]
-actual value is [11858.75] Predicted value is - [11924.407] diff is - [-65.65722656]
-actual value is [11904.2] Predicted value is - [11876.217] diff is - [27.98320313]
-actual value is [11915.15] Predicted value is - [11920.428] diff is - [-5.27773438]
-actual value is [11919.45] Predicted value is - [11931.051] diff is - [-11.60078125]
-actual value is [12004.75] Predicted value is - [11935.219] diff is - [69.53125]
-actual value is [12025.65] Predicted value is - [12017.526] diff is - [8.12363281]
-actual value is [11967.3] Predicted value is - [12037.579] diff is - [-70.27910156]
-actual value is [11922.45] Predicted value is - [11981.48] diff is - [-59.03046875]
-actual value is [12110.2] Predicted value is - [11938.126] diff is - [172.07402344]
-actual value is [12068.5] Predicted value is - [12118.223] diff is - [-49.72265625]
-actual value is [12132.1] Predicted value is - [12078.547] diff is - [53.553125]
-actual value is [12146.2] Predicted value is - [12138.98] diff is - [7.21953125]
-actual value is [12137.05] Predicted value is - [12152.316] diff is - [-15.26640625]
-actual value is [12067.65] Predicted value is - [12143.665] diff is - [-76.01503906]
-actual value is [11969.95] Predicted value is - [12077.736] diff is - [-107.78632812]
-actual value is [12071.25] Predicted value is - [11984.035] diff is - [87.21484375]
-actual value is [12047.35] Predicted value is - [12081.169] diff is - [-33.81894531]
-actual value is [11939.1] Predicted value is - [12058.351] diff is - [-119.25058594]
-actual value is [11950.5] Predicted value is - [11954.244] diff is - [-3.74414062]
-actual value is [11867.35] Predicted value is - [11965.264] diff is - [-97.91367187]
-actual value is [11944.3] Predicted value is - [11884.598] diff is - [59.70234375]
-actual value is [12026.4] Predicted value is - [11959.272] diff is - [67.12753906]
-actual value is [12131.35] Predicted value is - [12038.297] diff is - [93.053125]
-actual value is [12082.45] Predicted value is - [12138.2705] diff is - [-55.82050781]
-actual value is [12197.] Predicted value is - [12091.842] diff is - [105.15820312]
-actual value is [12223.4] Predicted value is - [12200.17] diff is - [23.23007812]
-actual value is [12266.45] Predicted value is - [12224.917] diff is - [41.53300781]
-actual value is [12235.45] Predicted value is - [12265.088] diff is - [-29.63789062]
-actual value is [12269.25] Predicted value is - [12236.185] diff is - [33.06542969]
-actual value is [12211.85] Predicted value is - [12267.693] diff is - [-55.84335937]
-actual value is [12172.9] Predicted value is - [12214.101] diff is - [-41.20058594]
-actual value is [12274.9] Predicted value is - [12177.506] diff is - [97.39414062]
-actual value is [12247.1] Predicted value is - [12272.945] diff is - [-25.8453125]
 #function for accuracy
 def accuracy(y,ycap,closeness):
   de=100-closeness
@@ -327,7 +145,8 @@ def accuracy(y,ycap,closeness):
 accuracy(predictionsUnscaled, y_test, 95)
 
 99.31972789115646
-
+--------------------------------- Ignore till this code - end
+import matplotlib.pyplot as plt
 
 fig, ax=plt.subplots(figsize=(16,8))
 
@@ -344,5 +163,82 @@ plt.plot(predictionsUnscaled, color='green', label='Predicted Testing Price')
 plt.legend()
 
  
+
+
+
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+#Reading the infput/source file
+df=pd.read_csv('nifty3yrdata.txt')
+print(df.head()) #Priniting top 5 rows of dataframe
+olddata=df.copy()
+#olddata
+
+def normalise(df):
+  #from sklearn.preprocessing import MinMaxScaler
+  scaler=MinMaxScaler(feature_range=(0,1))
+  df['Open']=scaler.fit_transform(df.Open.values.reshape(-1,1))
+  df['High']=scaler.fit_transform(df.High.values.reshape(-1,1))
+  df['Low']=scaler.fit_transform(df.Low.values.reshape(-1,1))
+  df['Close']=scaler.fit_transform(df.Close.values.reshape(-1,1))
+  return df
+
+
+df_scaled=normalise(df)
+df_scaled.head()
+df_scaled=df_scaled.drop(columns='Date')#Turnover (Rs. Cr)
+df_scaled=df_scaled.drop(columns='Turnover (Rs. Cr)')
+df_scaled
+
+valid_set_size_percentage=10
+test_set_size_percentage=10
+seq_len=20
+
+def load_data(stock,seq_len):
+  data_raw=stock.as_matrix()
+  data=[]
+  # print(data_raw)
+  for index in range(len(data_raw)-seq_len):
+  #for index in range(100):
+    #print(len(data_raw)-seq_len)
+    data.append(data_raw[index:index+seq_len])
+  #print(data.ndim)
+  data=np.array(data)
+  #print(data.ndim)
+  print('data shape is:',data.shape)
+  valid_set_size=int(np.round(valid_set_size_percentage/100*data.shape[0]))
+  #print(valid_set_size_percentage/100*data.shape[0])
+  test_set_size=int(np.round(test_set_size_percentage/100*data.shape[0]))
+  #print('valid_set_size',valid_set_size)
+  #print('test_set_size',test_set_size)
+  train_set_size=data.shape[0]-(valid_set_size+test_set_size)
+  print('train_set_size',train_set_size)
+  x_train=data[:train_set_size,:-1,:]
+  y_train=data[:train_set_size,-1,1]
+  x_valid=data[train_set_size:train_set_size+valid_set_size,:-1,:]
+  y_valid=data[train_set_size:train_set_size+valid_set_size,-1,:]
+  x_test=data[train_set_size+valid_set_size:,:-1,:]
+  y_test=data[train_set_size+valid_set_size:,-1,:]
+  return [x_train,y_train,x_valid,y_valid,x_test,y_test]
+
+
+x_train,y_train,x_valid,y_valid,x_test,y_test=load_data(df_scaled,seq_len)
+print('x_train value is ',x_train.shape)
+print('y_train value is ',y_train.shape)
+print('x_valid value is ', x_valid.shape)
+print('y_valid value is ', y_valid.shape)
+print('x-test value is ', x_test.shape)
+print('y_test valus is ', y_test.shape)
+
+#Test set
+predictions=model.predict(x_test)
+
+predictionsUnscaled=scaler.inverse_transform(predictions)
+
+y_test=scaler.inverse_transform(y_test)
+
+for i in range(x_test.shape[0]):
+   print("actual value is",y_test[i], "Predicted value is -",predictionsUnscaled[i], "diff is -", y_test[i]-predictionsUnscaled[i] )
 
 
